@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .active {
+            display: block;
+        }
+        div:not(active) {
+            display: none;
+        }
+    </style>
+    <div id="test-box" style="width: 50px; height: 50px;background-color: #000000;">
+        hi
+    </div>
+    <button id="nut">button</button>
+    <script>
+        window.onload = function () {
+            document.getElementById("nut").addEventListener('click', function () {
+                document.getElementById("test-box").classList.toggle('active');
+            })
+        }
+    </script>
+</body>
+
+</html>
